@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat Medium'
+}
+
+    
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center
+}
+
+button {
+    float: right;
+    margin: 20px 42px 0px 0px;
+    padding: 10px 20px;
+    border: 1px solid rgb(255, 0, 0);
+    background-color: white;
+    color: #f80707;
+    margin-right: 5px;
+    margin: 20px 0px 0px 5px
+}
+
+button:hover {
+    background-color: #ff0000;
+    color: white;
+    cursor: pointer
+}
+
+.container div {
+    margin: 20px 40px;
+    position: relative
+}
+
+img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%
+}
+
+p:first-child {
+    font-size: 2rem
+}
+
+#displayNameHolder {
+    font-size: 3rem;
+    color: #ff0000
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Match Details</title>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+</head>
+<body>
+    <h1>Match Details</h1>
+
+    <form id="match-form">
+        <label for="username">User Name:</label>
+        <input type="text" id="username" required>
+        
+        <label for="matchField">Field:</label>
+        <input type="text" id="matchField" required>
+        
+        <label for="matchValue">Value:</label>
+        <input type="text" id="matchValue" required>
+        
+        <button type="submit">Submit</button>
+        <button type="logout" onclick="myFunction()">Logout</button>
+    </form>
+
+<script src ="./js/addadmin.js"></script>
+<script>
+    const out= document.getElementById('logout');
+    function myFunction() {
+    const onClickHandler = () => {
+        window.location.replace('index.html');
+    }
+}
+</script>
+</body>
+</html>

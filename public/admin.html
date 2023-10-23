@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+</head>
+<body>
+    <h1>Admin Login</h1>
+
+    <form id="adminLoginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        // Initialize Firebase
+        const firebaseConfig = {
+        apiKey: "AIzaSyB6wkx-rcLMhlQAhOGJIHGAbH6B8HyNClM",
+        authDomain: "webapproj.firebaseapp.com",
+        databaseURL: "https://webapproj-default-rtdb.firebaseio.com",
+        projectId: "webapproj",
+        storageBucket: "webapproj.appspot.com",
+        messagingSenderId: "250272386567",
+        appId: "1:250272386567:web:7a8a9e4c1eb19a4d83e4a2"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+        // Handle form submission
+        document.getElementById('adminLoginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Sign in with Firebase Authentication
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then(function (userCredential) {
+                    const user = userCredential.user;
+                    if (user.email === 'rohitsuresh34@gmail.com') {
+                        window.location.href = "addadmin.html";
+                    } else {
+                        alert('You do not have admin privileges.');
+                    }
+                })
+                .catch(function (error) {
+                    alert('Invalid email or password. Please try again.');
+                    console.error('Authentication error:', error);
+                });
+        });
+    </script>
+</body>
+</html>

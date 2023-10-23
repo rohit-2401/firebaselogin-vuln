@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firebase Form</title>
+</head>
+<body>
+    <div class="box">
+        <div class="form">
+            <h2>Fetch Game Information</h2>
+            <form id="myform">
+                <div class="inputbox">
+                    <input type="text" value="" id="username" required>
+                    <span>Enter Username</span>
+                </div>
+                <button type="button" class="sub" id="fetch">Fetch Info</button>
+            </form>
+            <div id="userInfo">
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="./js/fetch.js"></script>
+</body>
+</html>
